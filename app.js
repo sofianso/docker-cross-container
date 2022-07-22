@@ -71,8 +71,9 @@ app.get('/people', async(req, res) => {
 
 // Disabling mongoose to check whether or not movies can be retrieved from the API HINT = use Postman to check
 // host.docker.internal is a special URL that allows Docker to communicate to host machine
+// 172.17.0.2 is the IP address of my MongoDB container (it can differ when running with other systems)
 mongoose.connect(
-    'mongodb://host.docker.internal:27017/swfavorites', { useNewUrlParser: true },
+    'mongodb://172.17.0.2:27017/swfavorites', { useNewUrlParser: true },
     (err) => {
         if (err) {
             console.log(err);

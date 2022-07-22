@@ -1,1 +1,2 @@
 1. MongoDB is not part of this app, however, it's not included in the container.
+2. To build two separate Docker containers, one for MongoDB and another one for Node: https://onedigital.udemy.com/course/docker-kubernetes-the-practical-guide/learn/lecture/22166994#overview
