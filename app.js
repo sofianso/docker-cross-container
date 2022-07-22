@@ -67,16 +67,17 @@ app.get('/people', async(req, res) => {
     }
 });
 
-app.listen(3000);
+// app.listen(3000);
 
 // Disabling mongoose to check whether or not movies can be retrieved from the API HINT = use Postman to check
-// mongoose.connect(
-//     'mongodb://localhost:27017/swfavorites', { useNewUrlParser: true },
-//     (err) => {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             app.listen(3000);
-//         }
-//     }
-// );
+// host.docker.internal is a special URL that allows Docker to communicate to host machine
+mongoose.connect(
+    'mongodb://host.docker.internal:27017/swfavorites', { useNewUrlParser: true },
+    (err) => {
+        if (err) {
+            console.log(err);
+        } else {
+            app.listen(3000);
+        }
+    }
+);
