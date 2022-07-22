@@ -1,0 +1,1 @@
+1. MongoDB is not part of this app, however, it's not included in the container.
