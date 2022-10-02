@@ -14,8 +14,8 @@ A containerized `node` app will be able to fetch data from an external API (Star
 5. Lastly, run the two following commands:
    With MongoDB, there is no need to expose the port like the one in `favorites` because it is sharing the same network. However, you need expose the port in the `favorites` in order to `CRUD` data.
 
-   `docker run -d --name mongodb --network favorites-net mongo`
-   `docker run -d --name favorites --network favorites-net --rm -p 3000:3000 favorites-node`
+   1. `docker run -d --name mongodb --network favorites-net mongo`
+   2. `docker run -d --name favorites --network favorites-net --rm -p 3000:3000 favorites-node`
 
 ## List of APIs
 
